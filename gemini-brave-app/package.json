@@ -1,0 +1,35 @@
+{
+  "name": "gemini-brave-app",
+  "version": "1.0.0",
+  "description": "A project integrating Gemini and Brave browser functionalities with terminal capabilities.",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.4.3",
+    "ts-node": "^10.4.0",
+    "jest": "^27.0.6"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "@types/jest": "^27.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/gemini-brave-app.git"
+  },
+  "keywords": [
+    "gemini",
+    "brave",
+    "terminal",
+    "react"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
