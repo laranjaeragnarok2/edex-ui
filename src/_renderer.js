@@ -386,9 +386,9 @@ async function initUI() {
 
     getDisplayName().then(user => {
         if (user) {
-            greeter.innerHTML += `Welcome back, <em>${user}</em>`;
+            greeter.innerHTML += `Bem vindo de volta, <em>${user}</em>`;
         } else {
-            greeter.innerHTML += "Welcome back";
+            greeter.innerHTML += "Bem vindo de volta";
         }
     });
 
@@ -937,7 +937,7 @@ window.openShortcutsHelp = () => {
                             <th>Enabled</th>
                             <th>Trigger</th>
                             <th>Command</th>
-                        <tr>
+                        </tr>
                        ${customList}
                     </table>
                 </details>

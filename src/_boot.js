@@ -17,6 +17,22 @@ process.on("uncaughtException", e => {
     process.exit(1);
 });
 
+process.on("unhandledRejection", (reason, promise) => {
+    signale.fatal("Unhandled Promise Rejection:", reason);
+    dialog.showErrorBox("eDEX-UI - Erro de Promise", reason && reason.message ? reason.message : String(reason));
+    if (tty) {
+        tty.close();
+    }
+    if (extraTtys) {
+        Object.keys(extraTtys).forEach(key => {
+            if (extraTtys[key] !== null) {
+                extraTtys[key].close();
+            }
+        });
+    }
+    process.exit(1);
+});
+
 signale.start(`Starting eDEX-UI v${app.getVersion()}`);
 signale.info(`With Node ${process.versions.node} and Electron ${process.versions.electron}`);
 signale.info(`Renderer is Chrome ${process.versions.chrome}`);
